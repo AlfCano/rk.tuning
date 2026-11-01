@@ -1,0 +1,50 @@
+<!DOCTYPE rkhelp >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<summary>
+	</summary>
+	<usage>
+	</usage>
+	<!--
+		<section id="sct_EDITORDE" title="EDIT OR DELETE ME">
+			EDIT OR DELETE ME
+		</section>
+	-->
+	<settings>
+		<caption id="tab_VrblsRls" />
+		<setting id="rec_data">
+		</setting>
+		<setting id="rec_target">
+		</setting>
+		<setting id="rec_preds">
+		</setting>
+		<caption id="tab_PrprcssS" />
+		<caption id="frm_DtTrnsfA" />
+		<setting id="rec_impute">
+		</setting>
+		<setting id="rec_dummy">
+		</setting>
+		<setting id="rec_norm">
+		</setting>
+		<setting id="rec_imb">
+		</setting>
+		<caption id="tab_Output" />
+		<caption id="frm_ExprtObW" />
+		<setting id="rec_save">
+		</setting>
+	</settings>
+	<!--
+		<related>
+			<ul>
+				<li>
+					<link href="rkward://rhelp/..." />
+				</li>
+			</ul>
+		</related>
+	-->
+	<technical>
+	</technical>
+</document>

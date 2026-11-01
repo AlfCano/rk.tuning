@@ -1,0 +1,63 @@
+<!DOCTYPE rkhelp >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<summary>
+	</summary>
+	<usage>
+	</usage>
+	<!--
+		<section id="sct_EDITORDE" title="EDIT OR DELETE ME">
+			EDIT OR DELETE ME
+		</section>
+	-->
+	<settings>
+		<caption id="tab_1InptsGl" />
+		<caption id="frm_InptObDD" />
+		<setting id="exec_data">
+		</setting>
+		<setting id="exec_res">
+		</setting>
+		<setting id="exec_rec">
+		</setting>
+		<setting id="exec_mod">
+		</setting>
+		<caption id="frm_TuningGl" />
+		<setting id="exec_metric">
+		</setting>
+		<caption id="tab_2PltOptn" />
+		<caption id="frm_PltCstmz" />
+		<setting id="exec_plot_main">
+		</setting>
+		<setting id="exec_plot_xlab">
+		</setting>
+		<setting id="exec_plot_ylab">
+		</setting>
+		<caption id="frm_HTMLGrpS" />
+		<setting id="exec_plot_w">
+		</setting>
+		<setting id="exec_plot_h">
+		</setting>
+		<setting id="exec_plot_res">
+		</setting>
+		<caption id="tab_3Output" />
+		<caption id="frm_ExprtObW" />
+		<setting id="exec_save">
+		</setting>
+		<setting id="exec_save_plot">
+		</setting>
+	</settings>
+	<!--
+		<related>
+			<ul>
+				<li>
+					<link href="rkward://rhelp/..." />
+				</li>
+			</ul>
+		</related>
+	-->
+	<technical>
+	</technical>
+</document>

@@ -1,0 +1,60 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="2.BuildRecipePreprocessing.js" />
+	<help file="2.BuildRecipePreprocessing.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<connect governor="rec_data.available" client="rec_vs.root" />
+	</logic>
+	<dialog label="2. Build Recipe (Feature Engineering)">
+		<row id="row_vVRVRTDDFT">
+			<varselector id="rec_vs" />
+			<column id="clm_tVRVRTDDFT">
+				<tabbook>
+					<tab label="Variables (Roles)" id="tab_VrblsRls">
+						<column id="clm_vTDDFTVYPV">
+							<varslot id="rec_data" label="Training Dataset (Data Frame)" source="rec_vs" classes="data.frame" required="true" />
+							<varslot id="rec_target" label="Target Variable (Y)" source="rec_vs" required="true" />
+							<varslot id="rec_preds" label="Predictor Variables (X) (Leave empty to use all remaining)" source="rec_vs" multi="true" />
+							<stretch />
+						</column>
+					</tab>
+					<tab label="Preprocessing Steps" id="tab_PrprcssS">
+						<column id="clm_fDTADTAHMD">
+							<frame label="Data Transformations (Applied in order)" id="frm_DtTrnsfA">
+								<dropdown id="rec_impute" label="Handling Missing Data (NAs)">
+									<option label="Do nothing (Algorithms might fail if NAs exist)" value="none" checked="true" />
+									<option label="Impute Mean (Numeric) / Mode (Categorical)" value="mean" />
+									<option label="Impute via K-Nearest Neighbors (KNN)" value="knn" />
+								</dropdown>
+								<checkbox id="rec_dummy" label="One-Hot Encoding: Convert categorical variables to dummy numeric columns" value="TRUE" checked="true" />
+								<checkbox id="rec_norm" label="Normalize: Center and Scale all numeric predictors" value="TRUE" checked="true" />
+								<dropdown id="rec_imb" label="Class Imbalance Handling (Only for Classification)">
+									<option label="Do nothing (Keep original proportions)" value="none" checked="true" />
+									<option label="Downsample (Reduce majority class)" value="down" />
+									<option label="SMOTE (Synthetically oversample minority class) *Requires 'themis'* " value="smote" />
+								</dropdown>
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+					<tab label="Output" id="tab_Output">
+						<column id="clm_fEOWEOWSRO">
+							<frame label="Export Object to Workspace" id="frm_ExprtObW">
+								<saveobject label="Save Recipe Object As:" checkable="true" checked="true" initial="rec_obj" id="rec_save" />
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+				</tabbook>
+			</column>
+		</row>
+	</dialog>
+</document>

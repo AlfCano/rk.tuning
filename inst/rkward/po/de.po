@@ -1,0 +1,167 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: rk.tuning 0.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-01 15:00+0000\n"
+"PO-Revision-Date: 2026-11-01 15:00+0000\n"
+"Last-Translator: Alfonso Cano <alfonso.cano@correo.buap.mx>\n"
+"Language-Team: German\n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+# ================= MODULE 1 =================
+msgid "1. Resample Data (Validation Strategy)"
+msgstr "1. Resampling (Validierungsstrategie)"
+
+msgid "Dataset to Resample"
+msgstr "Zu resamplender Datensatz"
+
+msgid "Stratification Variable (Optional but recommended to balance classes)"
+msgstr "Stratifizierungsvariable (Optional, aber empfohlen für Klassengleichgewicht)"
+
+msgid "Resampling Method"
+msgstr "Resampling-Methode"
+
+msgid "K-Fold Cross-Validation"
+msgstr "K-fache Kreuzvalidierung"
+
+msgid "Bootstrap Resampling"
+msgstr "Bootstrap-Resampling"
+
+msgid "Validation Split (Train/Test)"
+msgstr "Validierungsaufteilung (Trainings-/Testdaten)"
+
+msgid "Proportion of data for Training"
+msgstr "Anteil der Daten für das Training"
+
+msgid "Set Random Seed (Reproducibility)"
+msgstr "Zufalls-Seed setzen (Reproduzierbarkeit)"
+
+msgid "Save Resample Object As:"
+msgstr "Resampling-Objekt speichern als:"
+
+# ================= MODULE 2 =================
+msgid "2. Build Recipe (Feature Engineering)"
+msgstr "2. Rezept Erstellen (Feature-Engineering)"
+
+msgid "Training Dataset (Data Frame)"
+msgstr "Trainingsdatensatz (Data Frame)"
+
+msgid "Target Variable (Y)"
+msgstr "Zielvariable (Y)"
+
+msgid "Predictor Variables (X) (Leave empty to use all remaining)"
+msgstr "Prädiktorvariablen (X) (Leer lassen für alle verbleibenden)"
+
+msgid "Handling Missing Data (NAs)"
+msgstr "Umgang mit fehlenden Daten (NAs)"
+
+msgid "Do nothing (Algorithms might fail if NAs exist)"
+msgstr "Nichts tun (Algorithmen können bei NAs fehlschlagen)"
+
+msgid "Impute Mean (Numeric) / Mode (Categorical)"
+msgstr "Mittelwert (numerisch) / Modus (kategorisch) imputieren"
+
+msgid "Impute via K-Nearest Neighbors (KNN)"
+msgstr "Imputation über K-Nächste Nachbarn (KNN)"
+
+msgid "One-Hot Encoding: Convert categorical variables to dummy numeric columns"
+msgstr "One-Hot-Encoding: Kategorische Variablen in numerische Dummy-Spalten konvertieren"
+
+msgid "Normalize: Center and Scale all numeric predictors"
+msgstr "Normalisieren: Alle numerischen Prädiktoren zentrieren und skalieren"
+
+msgid "Class Imbalance Handling (Only for Classification)"
+msgstr "Umgang mit Klassenungleichgewicht (Nur für Klassifikation)"
+
+msgid "Do nothing (Keep original proportions)"
+msgstr "Nichts tun (Ursprüngliche Proportionen beibehalten)"
+
+msgid "Downsample (Reduce majority class)"
+msgstr "Downsampling (Reduzierung der Mehrheitsklasse)"
+
+msgid "SMOTE (Synthetically oversample minority class) *Requires 'themis'* "
+msgstr "SMOTE (Synthetisches Oversampling der Minderheitsklasse) *Erfordert 'themis'*"
+
+msgid "Save Recipe Object As:"
+msgstr "Rezept-Objekt speichern als:"
+
+# ================= MODULE 3 =================
+msgid "3. Model Spec (Algorithms & Tuning)"
+msgstr "3. Modellspezifikation (Algorithmen & Tuning)"
+
+msgid "Machine Learning Algorithm"
+msgstr "Machine-Learning-Algorithmus"
+
+msgid "Task (Mode)"
+msgstr "Aufgabe (Modus)"
+
+msgid "Classification (Predict categories)"
+msgstr "Klassifikation (Kategorien vorhersagen)"
+
+msgid "Regression (Predict numbers)"
+msgstr "Regression (Zahlen vorhersagen)"
+
+msgid "Grid Size (Number of random parameter combinations to try)"
+msgstr "Grid-Größe (Anzahl der zu testenden Parameterkombinationen)"
+
+msgid "Save Model Specification As:"
+msgstr "Modellspezifikation speichern als:"
+
+# ================= MODULE 4 =================
+msgid "4. Execute & Finalize Model"
+msgstr "4. Modell Ausführen & Finalisieren"
+
+msgid "1. Original Training Dataset"
+msgstr "1. Ursprünglicher Trainingsdatensatz"
+
+msgid "2. Resampling Object (e.g., cv_folds)"
+msgstr "2. Resampling-Objekt (z. B. cv_folds)"
+
+msgid "3. Recipe Object (e.g., rec_obj)"
+msgstr "3. Rezept-Objekt (z. B. rec_obj)"
+
+msgid "4. Model Specification (e.g., model_spec)"
+msgstr "4. Modellspezifikation (z. B. model_spec)"
+
+msgid "Optimization Metric"
+msgstr "Optimierungsmetrik"
+
+msgid "Accuracy (Classification)"
+msgstr "Genauigkeit (Klassifikation)"
+
+msgid "Save Final Trained Model As:"
+msgstr "Finales trainiertes Modell speichern als:"
+
+msgid "Save Plot (ggplot2) As:"
+msgstr "Grafik (ggplot2) speichern als:"
+
+# ================= NUEVAS OPCIONES DE GRÁFICO (MÓDULO 4) =================
+msgid "1. Inputs & Goal"
+msgstr "1. Eingaben & Ziel"
+
+msgid "2. Plot Options"
+msgstr "2. Grafikoptionen"
+
+msgid "3. Output"
+msgstr "3. Ausgabe"
+
+msgid "Main Title (Leave empty for default)"
+msgstr "Haupttitel (Leer lassen für Standard)"
+
+msgid "X-Axis Label (Leave empty for default)"
+msgstr "X-Achsen-Beschriftung (Leer lassen für Standard)"
+
+msgid "Y-Axis Label (Leave empty for default)"
+msgstr "Y-Achsen-Beschriftung (Leer lassen für Standard)"
+
+msgid "Plot Customization"
+msgstr "Grafikanpassung"
+
+msgid "HTML Graphics Size"
+msgstr "HTML-Grafikgröße"
+
+msgid "Export Objects to Workspace"
+msgstr "Objekte in den Workspace exportieren"

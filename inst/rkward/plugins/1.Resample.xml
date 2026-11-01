@@ -1,0 +1,71 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="1.Resample.js" />
+	<help file="1.Resample.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<connect governor="res_data.available" client="res_vs.root" />
+		<convert id="cond_vfold" sources="res_type.string" mode="equals" standard="vfold" />
+		<convert id="cond_boot" sources="res_type.string" mode="equals" standard="boot" />
+		<convert id="cond_split" sources="res_type.string" mode="equals" standard="split" />
+		<connect governor="cond_vfold" client="frm_kfold.enabled" />
+		<connect governor="cond_boot" client="frm_boot.enabled" />
+		<connect governor="cond_split" client="frm_split.enabled" />
+		<connect governor="res_seed_chk.state" client="res_seed_val.enabled" />
+	</logic>
+	<dialog label="1. Resample Data (Validation Strategy)">
+		<row id="row_vDMDMDRSVO">
+			<varselector id="res_vs" />
+			<column id="clm_tDMDMDRSVO">
+				<tabbook>
+					<tab label="Data &amp; Method" id="tab_DataMthd">
+						<column id="clm_vDRSVORMKF">
+							<varslot id="res_data" label="Dataset to Resample" source="res_vs" classes="data.frame" required="true" />
+							<varslot id="res_strata" label="Stratification Variable (Optional but recommended to balance classes)" source="res_vs" />
+							<dropdown id="res_type" label="Resampling Method">
+								<option label="K-Fold Cross-Validation" value="vfold" checked="true" />
+								<option label="Bootstrap Resampling" value="boot" />
+								<option label="Validation Split (Train/Test)" value="split" />
+							</dropdown>
+							<stretch />
+						</column>
+					</tab>
+					<tab label="Method Options" id="tab_MthdOptn">
+						<column id="clm_fKFONF1022">
+							<frame label="K-Fold Options" id="frm_kfold">
+								<spinbox label="Number of Folds (v)" id="res_v" initial="10" min="2" max="20" type="integer" />
+								<spinbox label="Repeats" id="res_repeats" initial="1" min="1" max="20" type="integer" />
+							</frame>
+							<frame label="Bootstrap Options" id="frm_boot">
+								<spinbox label="Number of Bootstraps" id="res_times" initial="25" min="1" max="500" type="integer" />
+							</frame>
+							<frame label="Validation Split Options" id="frm_split">
+								<spinbox label="Proportion of data for Training" id="res_prop" initial="0.75" min="0.1" max="0.99" />
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+					<tab label="Output" id="tab_Output">
+						<column id="clm_fRRSRSRTRU">
+							<frame label="Reproducibility" id="frm_Rprdcblt">
+								<checkbox id="res_seed_chk" label="Set Random Seed (Reproducibility)" value="TRUE" checked="true" />
+								<spinbox label="Seed Value" id="res_seed_val" initial="12345" min="1" max="999999" type="integer" />
+							</frame>
+							<frame label="Export Object to Workspace" id="frm_ExprtObW">
+								<saveobject label="Save Resample Object As:" checkable="true" checked="true" initial="cv_folds" id="res_save" />
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+				</tabbook>
+			</column>
+		</row>
+	</dialog>
+</document>

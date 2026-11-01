@@ -1,0 +1,69 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="4.ExecuteFinalizeModel.js" />
+	<help file="4.ExecuteFinalizeModel.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+	</logic>
+	<dialog label="4. Execute &amp; Finalize Model">
+		<row id="row_v1IG1IGIOD">
+			<varselector id="exec_vs" />
+			<column id="clm_t1IG1IGIOD">
+				<tabbook>
+					<tab label="1. Inputs &amp; Goal" id="tab_1InptsGl">
+						<column id="clm_fIODDIODD1">
+							<frame label="Input Objects (Drag and Drop)" id="frm_InptObDD">
+								<varslot id="exec_data" label="1. Original Training Dataset" source="exec_vs" classes="data.frame" required="true" />
+								<varslot id="exec_res" label="2. Resampling Object (e.g., cv_folds)" source="exec_vs" classes="rset" required="true" />
+								<varslot id="exec_rec" label="3. Recipe Object (e.g., rec_obj)" source="exec_vs" classes="recipe" required="true" />
+								<varslot id="exec_mod" label="4. Model Specification (e.g., model_spec)" source="exec_vs" classes="model_spec" required="true" />
+							</frame>
+							<frame label="Tuning Goal" id="frm_TuningGl">
+								<dropdown id="exec_metric" label="Optimization Metric">
+									<option label="Accuracy (Classification)" value="accuracy" checked="true" />
+									<option label="ROC AUC (Classification)" value="roc_auc" />
+									<option label="RMSE (Regression)" value="rmse" />
+									<option label="R-Squared (Regression)" value="rsq" />
+								</dropdown>
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+					<tab label="2. Plot Options" id="tab_2PltOptn">
+						<column id="clm_fPCPCMTLXA">
+							<frame label="Plot Customization" id="frm_PltCstmz">
+								<input label="Main Title (Leave empty for default)" id="exec_plot_main" />
+								<input label="X-Axis Label (Leave empty for default)" id="exec_plot_xlab" />
+								<input label="Y-Axis Label (Leave empty for default)" id="exec_plot_ylab" />
+							</frame>
+							<frame label="HTML Graphics Size" id="frm_HTMLGrpS">
+								<row id="row_sHTMLPW800">
+									<spinbox label="HTML Plot Width (pixels)" id="exec_plot_w" initial="800" min="100" max="5000" type="integer" />
+									<spinbox label="HTML Plot Height (pixels)" id="exec_plot_h" initial="600" min="100" max="5000" type="integer" />
+									<spinbox label="Resolution (DPI)" id="exec_plot_res" initial="120" min="72" max="600" type="integer" />
+								</row>
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+					<tab label="3. Output" id="tab_3Output">
+						<column id="clm_fEOWEOWSFT">
+							<frame label="Export Objects to Workspace" id="frm_ExprtObW">
+								<saveobject label="Save Final Trained Model As:" checkable="true" checked="true" initial="final_model" id="exec_save" />
+								<saveobject label="Save Plot (ggplot2) As:" checkable="true" initial="tuning_plot" id="exec_save_plot" />
+							</frame>
+							<stretch />
+						</column>
+					</tab>
+				</tabbook>
+			</column>
+		</row>
+	</dialog>
+</document>

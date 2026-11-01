@@ -1,0 +1,57 @@
+<!DOCTYPE rkhelp >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<summary>
+	</summary>
+	<usage>
+	</usage>
+	<!--
+		<section id="sct_EDITORDE" title="EDIT OR DELETE ME">
+			EDIT OR DELETE ME
+		</section>
+	-->
+	<settings>
+		<caption id="tab_DataMthd" />
+		<setting id="res_data">
+		</setting>
+		<setting id="res_strata">
+		</setting>
+		<setting id="res_type">
+		</setting>
+		<caption id="tab_MthdOptn" />
+		<caption id="frm_kfold" />
+		<setting id="res_v">
+		</setting>
+		<setting id="res_repeats">
+		</setting>
+		<caption id="frm_boot" />
+		<setting id="res_times">
+		</setting>
+		<caption id="frm_split" />
+		<setting id="res_prop">
+		</setting>
+		<caption id="tab_Output" />
+		<caption id="frm_Rprdcblt" />
+		<setting id="res_seed_chk">
+		</setting>
+		<setting id="res_seed_val">
+		</setting>
+		<caption id="frm_ExprtObW" />
+		<setting id="res_save">
+		</setting>
+	</settings>
+	<!--
+		<related>
+			<ul>
+				<li>
+					<link href="rkward://rhelp/..." />
+				</li>
+			</ul>
+		</related>
+	-->
+	<technical>
+	</technical>
+</document>

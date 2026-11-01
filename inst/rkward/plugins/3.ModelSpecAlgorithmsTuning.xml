@@ -1,0 +1,111 @@
+<!DOCTYPE rkplugin >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<code file="3.ModelSpecAlgorithmsTuning.js" />
+	<help file="3.ModelSpecAlgorithmsTuning.rkh" />
+	<!--
+		<dependencies>
+		</dependencies>
+	-->
+	<logic>
+		<convert id="cond_rf" sources="alg_type.string" mode="equals" standard="rf" />
+		<convert id="cond_xgb" sources="alg_type.string" mode="equals" standard="xgb" />
+		<convert id="cond_svm" sources="alg_type.string" mode="equals" standard="svm" />
+		<connect governor="cond_rf" client="frm_rf.enabled" />
+		<connect governor="cond_xgb" client="frm_xgb.enabled" />
+		<connect governor="cond_svm" client="frm_svm.enabled" />
+		<connect governor="rf_mtry_chk.state.not" client="rf_mtry_val.enabled" />
+		<connect governor="rf_trees_chk.state.not" client="rf_trees_val.enabled" />
+		<connect governor="rf_minn_chk.state.not" client="rf_minn_val.enabled" />
+		<connect governor="xgb_trees_chk.state.not" client="xgb_trees_val.enabled" />
+		<connect governor="xgb_depth_chk.state.not" client="xgb_depth_val.enabled" />
+		<connect governor="xgb_lr_chk.state.not" client="xgb_lr_val.enabled" />
+		<connect governor="svm_cost_chk.state.not" client="svm_cost_val.enabled" />
+		<connect governor="svm_sigma_chk.state.not" client="svm_sigma_val.enabled" />
+	</logic>
+	<dialog label="3. Model Spec (Algorithms &amp; Tuning)">
+		<tabbook>
+			<tab label="1. Algorithm &amp; Mode" id="tab_1AlgrthM">
+				<column id="clm_dMLARFXGBG">
+					<dropdown id="alg_type" label="Machine Learning Algorithm">
+						<option label="Random Forest (ranger)" value="rf" checked="true" />
+						<option label="XGBoost / Gradient Boosting (xgboost)" value="xgb" />
+						<option label="Support Vector Machine - Radial (kernlab)" value="svm" />
+					</dropdown>
+					<radio id="alg_mode" label="Task (Mode)">
+						<option label="Classification (Predict categories)" value="classification" checked="true" />
+						<option label="Regression (Predict numbers)" value="regression" />
+					</radio>
+					<stretch />
+				</column>
+			</tab>
+			<tab label="2. Random Forest Settings" id="tab_2RndmFrS">
+				<column id="clm_fRFS1TVTRU">
+					<frame label="Random Forest Settings" id="frm_rf">
+						<row id="row_rf_1">
+							<checkbox id="rf_mtry_chk" label="Tune 'mtry' (Variables sampled at each split)" value="TRUE" checked="true" />
+							<spinbox label="Fixed 'mtry'" id="rf_mtry_val" initial="3" min="1" max="100" type="integer" />
+						</row>
+						<row id="row_rf_2">
+							<checkbox id="rf_trees_chk" label="Tune 'trees' (Number of trees)" value="TRUE" />
+							<spinbox label="Fixed 'trees'" id="rf_trees_val" initial="500" min="1" max="5000" type="integer" />
+						</row>
+						<row id="row_rf_3">
+							<checkbox id="rf_minn_chk" label="Tune 'min_n' (Minimum data points in a node)" value="TRUE" checked="true" />
+							<spinbox label="Fixed 'min_n'" id="rf_minn_val" initial="5" min="1" max="100" type="integer" />
+						</row>
+					</frame>
+					<stretch />
+				</column>
+			</tab>
+			<tab label="3. XGBoost Settings" id="tab_3XGBstSt">
+				<column id="clm_fXGBS1TNTR">
+					<frame label="XGBoost Settings" id="frm_xgb">
+						<row id="row_xgb_1">
+							<checkbox id="xgb_trees_chk" label="Tune 'trees' (Number of trees)" value="TRUE" checked="true" />
+							<spinbox label="Fixed 'trees'" id="xgb_trees_val" initial="500" min="1" max="5000" type="integer" />
+						</row>
+						<row id="row_xgb_2">
+							<checkbox id="xgb_depth_chk" label="Tune 'tree_depth' (Max depth of trees)" value="TRUE" checked="true" />
+							<spinbox label="Fixed 'tree_depth'" id="xgb_depth_val" initial="6" min="1" max="15" type="integer" />
+						</row>
+						<row id="row_xgb_3">
+							<checkbox id="xgb_lr_chk" label="Tune 'learn_rate' (Learning rate)" value="TRUE" checked="true" />
+							<spinbox label="Fixed 'learn_rate'" id="xgb_lr_val" initial="0.3" min="1e-04" max="1" />
+						</row>
+					</frame>
+					<stretch />
+				</column>
+			</tab>
+			<tab label="4. SVM Settings" id="tab_4SVMSttn">
+				<column id="clm_fSVMS1TCTR">
+					<frame label="SVM Settings" id="frm_svm">
+						<row id="row_svm_1">
+							<checkbox id="svm_cost_chk" label="Tune 'cost' (Cost of predicting a sample within the margin)" value="TRUE" checked="true" />
+							<spinbox label="Fixed 'cost'" id="svm_cost_val" initial="1" min="0.001" max="100" />
+						</row>
+						<row id="row_svm_2">
+							<checkbox id="svm_sigma_chk" label="Tune 'rbf_sigma' (Precision parameter)" value="TRUE" checked="true" />
+							<spinbox label="Fixed 'rbf_sigma'" id="svm_sigma_val" initial="0.1" min="0.001" max="10" />
+						</row>
+					</frame>
+					<stretch />
+				</column>
+			</tab>
+			<tab label="5. Grid &amp; Output" id="tab_5GrdOtpt">
+				<column id="clm_fTGCTGCGSN">
+					<frame label="Tuning Grid Configuration" id="frm_TnngGrdC">
+						<spinbox label="Grid Size (Number of random parameter combinations to try)" id="alg_grid_size" initial="10" min="1" max="100" type="integer" />
+					</frame>
+					<frame label="Export Specification to Workspace" id="frm_ExprtSpW">
+						<saveobject label="Save Model Specification As:" checkable="true" checked="true" initial="model_spec" id="alg_save" />
+					</frame>
+					<stretch />
+				</column>
+			</tab>
+		</tabbook>
+	</dialog>
+</document>

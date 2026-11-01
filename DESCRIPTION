@@ -1,0 +1,19 @@
+Package: rk.tuning
+Type: Package
+Title: Hyperparameter Tuning and Machine Learning Workflows via
+        tidymodels
+Version: 0.0.1
+Date: 2026-11-01
+Author: Alfonso Cano
+Maintainer: Alfonso Cano <alfonso.cano@correo.buap.mx>
+Depends: R (>= 4.1.0)
+Suggests: tidymodels, rsample, themis, ranger, xgboost, kernlab
+Enhances: rkward
+Description: Hyperparameter Tuning and Machine Learning Workflows via
+        tidymodels
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyLoad: yes
+URL: https://github.com/AlfCano/rk.tuning
+Authors@R: person(given="Alfonso", family="Cano",
+        email="alfonso.cano@correo.buap.mx", role=c("aut", "cre"))

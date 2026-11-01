@@ -1,0 +1,79 @@
+<!DOCTYPE rkhelp >
+<document>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<summary>
+	</summary>
+	<usage>
+	</usage>
+	<!--
+		<section id="sct_EDITORDE" title="EDIT OR DELETE ME">
+			EDIT OR DELETE ME
+		</section>
+	-->
+	<settings>
+		<caption id="tab_1AlgrthM" />
+		<setting id="alg_type">
+		</setting>
+		<setting id="alg_mode">
+		</setting>
+		<caption id="tab_2RndmFrS" />
+		<caption id="frm_rf" />
+		<setting id="rf_mtry_chk">
+		</setting>
+		<setting id="rf_mtry_val">
+		</setting>
+		<setting id="rf_trees_chk">
+		</setting>
+		<setting id="rf_trees_val">
+		</setting>
+		<setting id="rf_minn_chk">
+		</setting>
+		<setting id="rf_minn_val">
+		</setting>
+		<caption id="tab_3XGBstSt" />
+		<caption id="frm_xgb" />
+		<setting id="xgb_trees_chk">
+		</setting>
+		<setting id="xgb_trees_val">
+		</setting>
+		<setting id="xgb_depth_chk">
+		</setting>
+		<setting id="xgb_depth_val">
+		</setting>
+		<setting id="xgb_lr_chk">
+		</setting>
+		<setting id="xgb_lr_val">
+		</setting>
+		<caption id="tab_4SVMSttn" />
+		<caption id="frm_svm" />
+		<setting id="svm_cost_chk">
+		</setting>
+		<setting id="svm_cost_val">
+		</setting>
+		<setting id="svm_sigma_chk">
+		</setting>
+		<setting id="svm_sigma_val">
+		</setting>
+		<caption id="tab_5GrdOtpt" />
+		<caption id="frm_TnngGrdC" />
+		<setting id="alg_grid_size">
+		</setting>
+		<caption id="frm_ExprtSpW" />
+		<setting id="alg_save">
+		</setting>
+	</settings>
+	<!--
+		<related>
+			<ul>
+				<li>
+					<link href="rkward://rhelp/..." />
+				</li>
+			</ul>
+		</related>
+	-->
+	<technical>
+	</technical>
+</document>

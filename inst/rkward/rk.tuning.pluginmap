@@ -1,0 +1,175 @@
+<!DOCTYPE
+	rkpluginmap
+>
+<document
+	base_prefix=""
+	namespace="1Resample"
+	id="1Resample_rkward"
+	po_id="1Resample_rkward"
+	priority="medium"
+>
+	<!--
+		this code was generated using the rkwarddev package.
+	perhaps don't make changes here, but in the rkwarddev script instead!
+	-->
+	<dependencies
+		R_min_version="4.1.0"
+	>
+		<package
+			name="tidymodels"
+		/>
+		<package
+			name="rsample"
+		/>
+		<package
+			name="themis"
+		/>
+		<package
+			name="ranger"
+		/>
+		<package
+			name="xgboost"
+		/>
+		<package
+			name="kernlab"
+		/>
+	</dependencies>
+	<about
+		name="rk.tuning"
+		shortinfo="Hyperparameter Tuning and Machine Learning Workflows via tidymodels"
+		longinfo="Hyperparameter Tuning and Machine Learning Workflows via tidymodels"
+		version="0.0.1"
+		releasedate="2026-11-01"
+		url="https://github.com/AlfCano/rk.tuning"
+		license="GPL (&gt;= 3)"
+	>
+		<author
+			given="Alfonso"
+			family="Cano"
+			email="alfonso.cano@correo.buap.mx"
+			role="aut, cre"
+		/>
+	</about>
+	<require
+		map="rkward::menu"
+	/>
+	<require
+		map="rkward::embedded"
+	/>
+	<components>
+		<component
+			id="cmp_1Resample2BldRcpPrprcssng"
+			label="2. Build Recipe (Preprocessing)"
+			type="standard"
+			file="plugins/2.BuildRecipePreprocessing.xml"
+		>
+		</component>
+		<component
+			id="cmp_1Rsmpl3MdlSpcAlgrthmsTnng"
+			label="3. Model Spec (Algorithms &amp; Tuning)"
+			type="standard"
+			file="plugins/3.ModelSpecAlgorithmsTuning.xml"
+		>
+		</component>
+		<component
+			id="cmp_1Resample4ExecuteFinlzMdl"
+			label="4. Execute &amp; Finalize Model"
+			type="standard"
+			file="plugins/4.ExecuteFinalizeModel.xml"
+		>
+		</component>
+		<component
+			id="cmp_1Resample1Resample"
+			label="1. Resample"
+			type="standard"
+			file="plugins/1.Resample.xml"
+		>
+		</component>
+	</components>
+	<hierarchy>
+		<menu
+			id="analysis"
+			label="Analysis"
+		>
+			<menu
+				id="PredictiveAnalytics"
+				label="Predictive Analytics"
+			>
+				<menu
+					id="AdvancedTuningtidymodels"
+					label="Advanced Tuning (tidymodels)"
+				>
+					<entry
+						component="cmp_1Resample2BldRcpPrprcssng"
+					/>
+				</menu>
+			</menu>
+		</menu>
+		<menu
+			id="analysis"
+			label="Analysis"
+		>
+			<menu
+				id="PredictiveAnalytics"
+				label="Predictive Analytics"
+			>
+				<menu
+					id="AdvancedTuningtidymodels"
+					label="Advanced Tuning (tidymodels)"
+				>
+					<entry
+						component="cmp_1Rsmpl3MdlSpcAlgrthmsTnng"
+					/>
+				</menu>
+			</menu>
+		</menu>
+		<menu
+			id="analysis"
+			label="Analysis"
+		>
+			<menu
+				id="PredictiveAnalytics"
+				label="Predictive Analytics"
+			>
+				<menu
+					id="AdvancedTuningtidymodels"
+					label="Advanced Tuning (tidymodels)"
+				>
+					<entry
+						component="cmp_1Resample4ExecuteFinlzMdl"
+					/>
+				</menu>
+			</menu>
+		</menu>
+		<menu
+			id="analysis"
+			label="Analysis"
+		>
+			<menu
+				id="PredictiveAnalytics"
+				label="Predictive Analytics"
+			>
+				<menu
+					id="AdvancedTuningtidymodels"
+					label="Advanced Tuning (tidymodels)"
+				>
+					<entry
+						component="cmp_1Resample1Resample"
+					/>
+				</menu>
+			</menu>
+		</menu>
+	</hierarchy>
+	<!--
+		<context
+			id="x11"
+		>
+		</context>
+	-->
+	<!--
+		<context
+			id="import"
+		>
+		</context>
+	-->
+</document>
